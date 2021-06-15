@@ -1,0 +1,40 @@
+1) Посмотреть где я       pwd
+2) Создать папку      mkdir foldername
+3) Зайти в папку       cd foldername
+4) Создать 3 папки     mkdir foldername(через пробел)mkdir foldername mkdir foldername
+5) Зайти в любоую папку cd foldername
+6) Создать 5 файлов (3 txt, 2 json)   touch 1.txt 2.txt 3.txt
+                                      touch 4.json 5.json 6.json
+7) Создать 3 папки   mkdir foldername(через пробел)mkdir foldername mkdir foldername
+8. Вывести список содержимого папки   ls -la
+9) + Открыть любой txt файл    nano 2.txt
+10) + написать туда что-нибудь, любой текст. писала текст
+11) + сохранить и выйти. ctrl O + ctrlX
+12) Выйти из папки на уровень выше cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку. mv имя файла,через пробел в какую папку
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. cp 1.txt 1.txt_clone
+15) Найти файл по имени find ~/ -iname "имя файла"(он находит путь, и потом find/полностью путь/(здесь он уже точно его нашел,затем)cd foldername
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает. tail -f 2.txt | grep - i tail
+17) вывести несколько первых строк из текстового файла head 2.txt
+18) вывести несколько последних строк из текстового файла  tail 2.txt
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает. less 2.txt
+20) вывести дату и время date
+=========
+
+Задание *
+1) Отправить http запрос на сервер.
+curl https://api.quarantine.country/api/v1/regions
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+скрипт
+#!/bin/bash
+
+cd 3
+mkdir home1 home2 home3
+cd home3
+touch test.txt tesst.txt tessst.txt
+touch test1.json test2.json
+mkdir home4 home5 home6
+ls -la
+mv test.txt ./home6
+mv tesst.txt ./home6
